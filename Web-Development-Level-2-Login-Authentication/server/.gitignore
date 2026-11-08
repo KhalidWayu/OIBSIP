@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Generated Prisma client
+/generated/prisma
+
+# SQLite database files
+dev.db
+dev.db-journal
+
+# Build output
+dist/
+
+# Local AI coding assistant files
+.agents/
+.claude/
+.windsurf/
+
+# Local skill configuration
+skills-lock.json
