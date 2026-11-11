@@ -1,0 +1,21 @@
+node_modules
+# Keep environment variables out of version control
+.env
+
+/src/generated/prisma
+
+# Local SQLite database
+dev.db
+dev.db-journal
+
+# Compiled output
+dist
+
+# Environment files
+.env.*
+!.env.example
+
+# Local AI assistant configuration and reference files
+.agents/
+.claude/
+.windsurf/
