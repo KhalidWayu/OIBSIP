@@ -1,0 +1,162 @@
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Calculator container */
+.calculator {
+  width: 100%;
+  max-width: 360px;
+  padding: 24px;
+  background: #1e293b;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #f8fafc;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* Display */
+.display {
+  min-height: 100px;
+  margin-bottom: 20px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  overflow: hidden;
+  background: #0f172a;
+  border-radius: 12px;
+  color: white;
+}
+
+.previous-operand {
+  min-height: 24px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.current-operand {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  min-height: 58px;
+  border: none;
+  border-radius: 12px;
+  background: #334155;
+  color: #f8fafc;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+button:hover {
+  background: #475569;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+/* Special buttons */
+.span-two {
+  grid-column: span 2;
+}
+
+.function {
+  background: #64748b;
+}
+
+.function:hover {
+  background: #94a3b8;
+}
+
+.operator {
+  background: #2563eb;
+}
+
+.operator:hover {
+  background: #3b82f6;
+}
+
+.equals {
+  background: #16a34a;
+}
+
+.equals:hover {
+  background: #22c55e;
+}
+
+/* Small screens */
+@media (max-width: 400px) {
+  .calculator {
+    padding: 16px;
+  }
+
+  button {
+    min-height: 52px;
+    font-size: 18px;
+  }
+}
+
+/* Clear button - Red */
+button[data-action="clear"] {
+  background: #dc2626;
+}
+
+button[data-action="clear"]:hover {
+  background: #ef4444;
+}
+
+/* Delete button - Orange */
+button[data-action="delete"] {
+  background: #f97316;
+}
+
+button[data-action="delete"]:hover {
+  background: #fb923c;
+}
+
+/* Equals button - Green */
+button.equals {
+  background: #16a34a;
+}
+
+button.equals:hover {
+  background: #22c55e;
+}
